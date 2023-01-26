@@ -1,0 +1,8 @@
+<form #myForm="ngForm" (ngSubmit)="saveEvent(myForm.value)">
+  <input type="text" name="address" [(ngModel)]="location.address">
+
+  <input [disabled]="!myForm.valid" type="submit" value="Save">
+</form>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,10 @@
+<form [formGroup]="myForm" (ngSubmit)="submitForm(myForm)">
+  <label for="name">Name</label>
+  <input type="text" formControlName="firstName">
+  <div formGroupName="location">
+      <label for="name">Adresse</label>
+      <input type="text" formControlName="adresse">
+  </div>
+
+  <input [disabled]="!myForm.valid" type="submit" value="Save">
+</form>
